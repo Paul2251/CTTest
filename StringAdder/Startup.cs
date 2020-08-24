@@ -33,7 +33,7 @@ namespace StringAdder
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddScoped<IAdder, Adder2>();
+            services.AddScoped<IAdder, Adder3>();
             services.AddScoped<IStringAdditionView, StringAdditionView>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
