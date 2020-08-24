@@ -1,0 +1,48 @@
+﻿div.formBackground {
+    border-radius:4px;
+    background-color:aliceblue;
+}
+
+h2.formMessage {
+    color:cornflowerblue;
+}
+
+h2.formMessageError {
+    color:red !important;
+}
+
+
+h4.formInputLabel {
+    color: cornflowerblue;
+}
+
+.formControlInError{
+    border-color:red !important;
+    border-width:2px !important;
+}
+
+.formControl {
+    font-size: 1em;
+    line-height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #000;
+    border-radius: 5px;
+    background-color: #dedede;
+    border-color: #dedede;
+    border-style: none;
+    margin: 0px 0px 5px 0px;
+    width:100%;
+}
+
+input.formSubmit {
+    font-size: 20px;
+    line-height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: darkseagreen;
+    margin: 0px 0px 5px 0px;
+    border: none;
+}

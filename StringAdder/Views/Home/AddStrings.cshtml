@@ -1,0 +1,42 @@
+﻿@using StringAdder.Interfaces.StringAddition;
+@model IStringAdditionView;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "String Adder";
+}
+@section CSS{
+
+    <link href="/css/form.css" rel="stylesheet" />
+
+}
+<form method="post">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 formBackground">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="@((!Model.Invalid) ? "formMessage" : "formMessageError")">@Model.Message</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="formInputLabel">Please enter your numbers separated by a comma</h4>
+                    <textarea placeHolder="e.g. 1.23,3.21,5.12" name="txtNumbers" class="@((Model.Invalid) ? "formControlInError" : "formControl")">@Model.ListOfNumbersToAdd</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="formInputLabel">
+                        @Html.Raw((!Model.Invalid && Model.Postback) ? "The answer is: " + Model.Total.ToString() : "&nbsp;")
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-right">
+                    <input type="submit" class="formSubmit" value="Add Together" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</form>
