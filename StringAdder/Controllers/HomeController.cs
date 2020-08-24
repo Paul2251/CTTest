@@ -25,7 +25,7 @@ namespace StringAdder.Controllers
             if (_stringAdditionView.Postback)
             {
                 _stringAdditionView.Invalid = !_adder.CheckIsValidListOfNumbers(_stringAdditionView.ListOfNumbersToAdd);
-                _stringAdditionView.Message = (_stringAdditionView.Invalid) ? "There was a problem with your list" : "";
+                _stringAdditionView.Message = (_stringAdditionView.Invalid) ? "There was a problem with your list: " + _adder.LastErrorMessage : "";
                 _stringAdditionView.Total = (_stringAdditionView.Invalid) ? 0 : _adder.AddTogetherStringList(_stringAdditionView.ListOfNumbersToAdd);
             }
             return View("AddStrings",_stringAdditionView);
