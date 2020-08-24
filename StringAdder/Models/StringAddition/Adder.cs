@@ -22,7 +22,7 @@ namespace StringAdder.Models.StringAddition
             }
         }
 
-        public double AddTogetherStringList(string listOfNumbers, string divider = ",")
+        public virtual double AddTogetherStringList(string listOfNumbers, string divider = ",")
         {
             double dblResult = 0;
             string[] arrNumbers = listOfNumbers.Split(divider);
@@ -31,3 +31,6 @@ namespace StringAdder.Models.StringAddition
         }
     }
 }
+
+
+//Allow the Add method to handle an unknown amount of numbers.
