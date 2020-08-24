@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-12">
                     <h4 class="formInputLabel">Please enter your numbers separated by a comma</h4>
-                    <textarea placeHolder="e.g. 1.23,3.21,5.12" name="txtNumbers" class="@((Model.Invalid) ? "formControlInError" : "formControl")">@Model.ListOfNumbersToAdd</textarea>
+                    <textarea placeHolder="e.g. 1.23,3.21,5.12" name="txtNumbers" class="formControl @((Model.Invalid) ? "formControlInError" : "")">@Model.ListOfNumbersToAdd</textarea>
                 </div>
             </div>
             <div class="row">
