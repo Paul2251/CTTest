@@ -16,7 +16,7 @@ namespace StringAdder.Models.StringAddition
                 newDivider = Regex.Replace(Regex.Replace(newDivider, "^//", ""), "\n", "");
                 listOfNumbers = Regex.Replace(listOfNumbers, @"^//(.)+\n", "");
                 //build or regex
-
+                divider = "[" + newDivider + "]";
             }
             return base.SplitUpListIntoNumberStrings(listOfNumbers, divider);
         }
@@ -25,4 +25,4 @@ namespace StringAdder.Models.StringAddition
     }
 }
 
-//Numbers greater than 1000 should be ignored, so adding 2 + 1001 + 13 = 15.
+//Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//*%\n1*2%3” should return 6.
